@@ -36,14 +36,13 @@ jobs:
             #command to scan files
             trivy fs .
             
-       - name: Docker build and push
-         run: |
+      - name: Docker build and push
+        run: |
               #run commands to build and push docker images
               docker build --build-arg TMDB_V3_API_KEY=e488ef946523a124190a363c8f008cdd -t netflix .
               docker tag netflix sushantkapare1717/netflix:latest
               docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
               docker push sushantkapare1717/netflix:latest  
-         env:
+        env:
               DOCKER_CLI_ACI: 1
             
-
