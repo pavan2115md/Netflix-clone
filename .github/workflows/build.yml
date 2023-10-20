@@ -46,7 +46,7 @@ jobs:
         env:
               DOCKER_CLI_ACI: 1
   deploy:    
-    needs: build-and-push 
+    needs: Docker build and push 
     runs-on: [aws-netflix]  
     steps:
       - name: Pull the docker image
