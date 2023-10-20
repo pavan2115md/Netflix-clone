@@ -43,7 +43,7 @@ jobs:
               docker tag netflix sevenajay/netflix:latest
               docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
               docker push sushantkapare1717/netflix:latest  
-       env:
+         env:
               DOCKER_CLI_ACI: 1
             
 
