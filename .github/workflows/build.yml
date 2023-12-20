@@ -45,7 +45,8 @@ jobs:
             DOCKER_CLI_ACI: 1
   deploy:    
     needs: build  
-    runs-on: [aws-netflix]  
+    #runs-on: [aws-netflix] 
+    runs-on: self-hosted
     steps:
       - name: Pull the docker image
         run: docker pull sushantkapare1717/netflix:latest
