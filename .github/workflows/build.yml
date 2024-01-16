@@ -55,5 +55,5 @@ jobs:
         - name: Trivy image scan
           run: trivy image pavan2115/netflixpa:latest
         - name: Run the container netflixpa
-          run: docker run -d --name netflixpa -p 8081:80 pavan2115/netflixpa:latest
+          run: docker run -d --name netflixpa -p 8089:80 pavan2115/netflixpa:latest
 
